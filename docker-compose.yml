@@ -1,0 +1,32 @@
+services:
+  php71:
+    build:
+      context: .
+      dockerfile: php71/Dockerfile
+    container_name: php71_container
+    ports:
+      - "8071:8080"
+    volumes:
+      - ./src:/var/www/html/src
+      - ./tests:/var/www/html/tests
+      - ./php71/composer.json:/var/www/html/composer.json
+      - ./php71/phpunit.xml:/var/www/html/phpunit.xml
+      - ./php71/vendor:/var/www/html/vendor
+      - ./php71/test-result:/var/www/html/test-result
+    working_dir: /var/www/html
+
+  php82:
+    build:
+      context: .
+      dockerfile: php82/Dockerfile
+    container_name: php82_container
+    ports:
+      - "8082:8080"
+    volumes:
+      - ./src:/var/www/html/src
+      - ./tests:/var/www/html/tests
+      - ./php82/composer.json:/var/www/html/composer.json
+      - ./php82/phpunit.xml:/var/www/html/phpunit.xml
+      - ./php82/vendor:/var/www/html/vendor
+      - ./php82/test-result:/var/www/html/test-result
+    working_dir: /var/www/html
