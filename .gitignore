@@ -3,8 +3,6 @@
 .phpunit.cache
 .phpunit.result.cache
 composer.lock
-phpunit.xml
-composer.json
 /php71/vendor/
 /php71/test-result/
 /php82/vendor/
