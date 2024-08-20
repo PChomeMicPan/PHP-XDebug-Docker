@@ -30,3 +30,14 @@ services:
       - ./php82/vendor:/var/www/html/vendor
       - ./php82/test-result:/var/www/html/test-result
     working_dir: /var/www/html
+  swoole:
+    build:
+      context: .
+      dockerfile: swoole/Dockerfile
+    container_name: swoole_container
+    ports:
+      - "9501:9501"
+    volumes:
+      - ./src:/var/www/html/src
+      - ./swoole/composer.json:/var/www/html/composer.json
+    working_dir: /var/www/html

@@ -7,3 +7,5 @@ composer.lock
 /php71/test-result/
 /php82/vendor/
 /php82/test-result/
+/swoole/vendor/
+/swoole/test-result/

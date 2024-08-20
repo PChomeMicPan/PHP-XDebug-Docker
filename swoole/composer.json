@@ -1,0 +1,12 @@
+{
+    "name": "mic/php_swoole_docker",
+    "autoload-dev": {
+        "classmap": [
+            "src"
+        ]
+    },
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {}
+}
